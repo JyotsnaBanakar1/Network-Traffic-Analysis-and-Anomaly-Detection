@@ -1,0 +1,3 @@
+alert ip any any -> any any (msg:"Possible DDoS attempt"; threshold: type both, track by_src, count 100, seconds 60; sid:1000001;)
+
+To run : snort -i <interface> -c /etc/snort/snort.conf
